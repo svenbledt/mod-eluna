@@ -1273,8 +1273,7 @@ namespace LuaGlobalFunctions
         return 0;
     }
 
-    template <typename T>
-    static int DBQueryAsync(lua_State* L, DatabaseWorkerPool<T>& db)
+    static int DBQueryAsync(lua_State* L, DatabaseWorkerPool& db)
     {
         const char* query = Eluna::CHECKVAL<const char*>(L, 1);
         luaL_checktype(L, 2, LUA_TFUNCTION);
@@ -1287,22 +1286,22 @@ namespace LuaGlobalFunctions
         }
 
         Eluna::GEluna->queryProcessor.AddCallback(db.AsyncQuery(query).WithCallback([L, funcRef](QueryResult result)
-            {
-                ElunaQuery* eq = result ? new ElunaQuery(result) : nullptr;
+        {
+            ElunaQuery* eq = result ? new ElunaQuery(result) : nullptr;
 
-                LOCK_ELUNA;
+            LOCK_ELUNA;
 
-                // Get function
-                lua_rawgeti(L, LUA_REGISTRYINDEX, funcRef);
+            // Get function
+            lua_rawgeti(L, LUA_REGISTRYINDEX, funcRef);
 
-                // Push parameters
-                Eluna::Push(L, eq);
+            // Push parameters
+            Eluna::Push(L, eq);
 
-                // Call function
-                Eluna::GEluna->ExecuteCall(1, 0);
+            // Call function
+            Eluna::GEluna->ExecuteCall(1, 0);
 
-                luaL_unref(L, LUA_REGISTRYINDEX, funcRef);
-            }));
+            luaL_unref(L, LUA_REGISTRYINDEX, funcRef);
+        }));
 
         return 0;
     }
