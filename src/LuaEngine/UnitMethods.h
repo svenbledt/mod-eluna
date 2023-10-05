@@ -1382,8 +1382,6 @@ namespace LuaUnit
     {
         uint32 type = Eluna::CHECKVAL<uint32>(L, 2);
         float rate = Eluna::CHECKVAL<float>(L, 3);
-        bool forced = Eluna::CHECKVAL<bool>(L, 4, false);
-        (void)forced; // ensure that the variable is referenced in order to pass compiler checks
         if (type >= MAX_MOVE_TYPE)
             return luaL_argerror(L, 2, "valid UnitMoveType expected");
 
