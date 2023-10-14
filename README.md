@@ -101,7 +101,6 @@ Eluna API for AC:
 - Added `Player:CanCompleteRepeatableQuest(questId)`: https://github.com/azerothcore/mod-eluna/pull/141
 - Added `Player:CanRewardQuest(questId)`: https://github.com/azerothcore/mod-eluna/pull/141
 - Added `Player:SetGlyph(glyphId, slotIndex)`: https://github.com/azerothcore/mod-eluna/pull/152
-- Added `Unit:SetSpeed(UnitMoveType, speed, forced)`: https://github.com/azerothcore/mod-eluna/pull/155
 
 ### Group
 - Added `Group:GetGroupType()`: https://github.com/azerothcore/mod-eluna/pull/82
@@ -115,6 +114,8 @@ Eluna API for AC:
 - Added `Unit:GetUnitFlagsTwo()`: https://github.com/azerothcore/mod-eluna/pull/137
 - Added `Unit:SetUnitFlags(flags)`: https://github.com/azerothcore/mod-eluna/pull/137
 - Added `Unit:SetUnitFlagsTwo(flags)`: https://github.com/azerothcore/mod-eluna/pull/137
+- Added `Unit:SetSpeedRate(UnitMoveType, speed)`: https://github.com/azerothcore/mod-eluna/pull/155
+- Added `Unit:SetSpeedRate()`: https://github.com/azerothcore/mod-eluna/pull/155
 
 ### GameObject
 - Added `GameObject:AddLoot()` to add loot at runtime to an **empty** container: https://github.com/azerothcore/mod-eluna/pull/52
