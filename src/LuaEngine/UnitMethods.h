@@ -1184,7 +1184,9 @@ namespace LuaUnit
     {
         uint32 type = Eluna::CHECKVAL<uint32>(L, 2);
         if (type >= MAX_MOVE_TYPE)
+        {
             return luaL_argerror(L, 2, "valid UnitMoveType expected");
+        }
 
         Eluna::Push(L, unit->GetSpeedRate((UnitMoveType)type));
 
