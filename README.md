@@ -101,6 +101,7 @@ Eluna API for AC:
 - Added `Player:CanCompleteRepeatableQuest(questId)`: https://github.com/azerothcore/mod-eluna/pull/141
 - Added `Player:CanRewardQuest(questId)`: https://github.com/azerothcore/mod-eluna/pull/141
 - Added `Player:SetGlyph(glyphId, slotIndex)`: https://github.com/azerothcore/mod-eluna/pull/152
+- Added `Unit:SetSpeed(UnitMoveType, speed, forced)`: https://github.com/azerothcore/mod-eluna/pull/155
 
 ### Group
 - Added `Group:GetGroupType()`: https://github.com/azerothcore/mod-eluna/pull/82
