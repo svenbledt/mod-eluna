@@ -114,7 +114,7 @@ Eluna API for AC:
 - Added `Unit:GetUnitFlagsTwo()`: https://github.com/azerothcore/mod-eluna/pull/137
 - Added `Unit:SetUnitFlags(flags)`: https://github.com/azerothcore/mod-eluna/pull/137
 - Added `Unit:SetUnitFlagsTwo(flags)`: https://github.com/azerothcore/mod-eluna/pull/137
-- Added `Unit:SetSpeedRate(UnitMoveType, speed)`: https://github.com/azerothcore/mod-eluna/pull/155
+- Added `Unit:SetSpeedRate(unitMoveType, speed)`: https://github.com/azerothcore/mod-eluna/pull/155
 - Added `Unit:SetSpeedRate()`: https://github.com/azerothcore/mod-eluna/pull/155
 
 ### GameObject
